@@ -109,3 +109,6 @@ motion()
 canv.bind('',click)
 
 mainloop()			
+
+click
+click
