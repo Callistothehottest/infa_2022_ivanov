@@ -1,5 +1,7 @@
-from tkinter import *
+import pygame
+from pygame.draw import *
 
+from random import randint
 from random import randrange as rnd, choice
 
 import time
@@ -7,7 +9,7 @@ import time
 root = Tk()
 
 root.geometry('800x600')
-
+  
 canv = Canvas(root,bg='white')
 
 l = Label(root, bg='black', fg='white', width=40)
@@ -107,5 +109,3 @@ motion()
 canv.bind('',click)
 
 mainloop()			
-
-click
