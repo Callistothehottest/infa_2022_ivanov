@@ -28,7 +28,8 @@ a = 600
 
 def new_ball():
 
-	global x, y, r	x = rnd(100,700)
+	global x, y, r	
+	x = rnd(100,700)
 
 	y = rnd(100,500)
 
