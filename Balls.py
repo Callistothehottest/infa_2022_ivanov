@@ -47,16 +47,15 @@ def new_ball():
 choice(colors),width=0)
 
           ball = {
-                          'id': id_,
-                          'x': x,
+                    'id': id_,
+                    'x': x,
 
-                          'y': y,
+                    'y': y,
 
-                          'vx': vx,
+                    'vx': vx,
 
-                          'vy': vy
-
-                     }
+                    'vy': vy
+          }
 
           balls.append(ball)
 
@@ -66,26 +65,24 @@ choice(colors),width=0)
 
             
 def click(event):
+          
+          global i, a
 
-        global i, a
+          for k, b in enumerate(balls):
 
-        for k, b in enumerate(balls):
+              if (event.x-b['x'])**2 + (event.y-b['y'])**2 <= r**2:
 
-                if (event.x-b['x'])**2 + (event.y-b['y'])**2 <= r**2:
+                    i+=1
 
-                        i+=1
+                    canv.delete(b['id'])
 
-                        canv.delete(b['id'])
+                    del balls[k]
+      
+          print('click')
 
-                        del balls[k]
-
-                        
-        print('click')
-
-        
 def motion():
 
-        for b in balls:
+          for b in balls:
 
                 if b['x'] < r or b['x'] > 800-r:
 
@@ -94,13 +91,13 @@ def motion():
                 if b['y'] < r or b['y'] > 600-r:
                     b['vy'] = -b['vy']
 
-            canv.move(b['id'], b['vx'], b['vy'])
+                canv.move(b['id'], b['vx'], b['vy'])
 
-            b['x'] += b['vx']
+                b['x'] += b['vx']
 
-            b['y'] += b['vy']
+                b['y'] += b['vy']
 
-        root.after(10, motion) 
+          root.after(10, motion) 
 
         
 new_ball()
