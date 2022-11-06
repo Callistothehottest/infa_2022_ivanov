@@ -46,23 +46,23 @@ def new_ball():
 
 choice(colors),width=0)
 
-            ball = {
-                            'id': id_,
-                            'x': x,
+          ball = {
+                          'id': id_,
+                          'x': x,
 
-                            'y': y,
+                          'y': y,
 
-                            'vx': vx,
+                          'vx': vx,
 
-                            'vy': vy
+                          'vy': vy
 
-                       }
+                     }
 
-            balls.append(ball)
+          balls.append(ball)
 
-            root.after(a,new_ball)
+          root.after(a,new_ball)
 
-            l['text'] = 'Score: ' + str(i)
+          l['text'] = 'Score: ' + str(i)
 
             
 def click(event):
