@@ -108,7 +108,7 @@ new_ball()
 
 motion()
 
-canv.bind('',click)
+canv.bind('<Button-1>',click)
 
 mainloop()			
 
