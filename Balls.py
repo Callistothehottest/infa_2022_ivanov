@@ -1,5 +1,6 @@
 import pygame
 from pygame.draw import *
+from tkinter import *
 
 from random import randint
 from random import randrange as rnd, choice
